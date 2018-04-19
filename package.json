@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "start:dev": "nodemon server.js | bunyan",
+    "start:dev": "PORT=9000 LOG_LEVEL=debug nodemon server.js | bunyan",
     "changelog:major": "changelog -M && git add CHANGELOG.md && git commit -m 'docs(changelog): updated CHANGELOG.md'",
     "changelog:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'docs(changelog): updated CHANGELOG.md'",
     "changelog:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'docs(changelog): updated CHANGELOG.md'",
@@ -48,7 +48,6 @@
     "ignore": [
       "*.md",
       "test/*"
-    ],
-    "verbose": true
+    ]
   }
 }
