@@ -1,0 +1,54 @@
+{
+  "name": "zebra",
+  "version": "1.0.0",
+  "description": "small node app to serve a static file and trigger a zpl printer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "start:dev": "nodemon server.js | bunyan",
+    "changelog:major": "changelog -M && git add CHANGELOG.md && git commit -m 'docs(changelog): updated CHANGELOG.md'",
+    "changelog:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'docs(changelog): updated CHANGELOG.md'",
+    "changelog:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'docs(changelog): updated CHANGELOG.md'",
+    "version:major": "npm version major -m 'chore(package): update package version to %s'",
+    "version:minor": "npm version minor -m 'chore(package): update package version to %s'",
+    "version:patch": "npm version patch -m 'chore(package): update package version to %s'",
+    "release:major": "npm run changelog:major && npm run version:major && git push --follow-tags origin",
+    "release:minor": "npm run changelog:minor && npm run version:minor && git push --follow-tags origin",
+    "release:patch": "npm run changelog:patch && npm run version:patch && git push --follow-tags origin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaveLo/node-zpl-test.git"
+  },
+  "author": "Dave Lowther",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DaveLo/node-zpl-test/issues"
+  },
+  "homepage": "https://github.com/DaveLo/node-zpl-test#readme",
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "bunyan-middleware": "^0.8.0",
+    "compression": "^1.7.2",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "generate-changelog": "^1.7.1",
+    "ghooks": "^2.0.3",
+    "nodemon": "^1.17.3",
+    "validate-commit": "^3.4.0"
+  },
+  "config": {
+    "ghooks": {
+      "commit-msg": "validate-commit-msg"
+    }
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "*.md",
+      "test/*"
+    ],
+    "verbose": true
+  }
+}
