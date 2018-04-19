@@ -10,7 +10,7 @@ Small collection of scripts meant to serve a static file that triggers a zebra p
 
 ## Current Status ##
 
-Pre-release status, many large changes still happening as I push towards V1, please keep an eye on the [Changelog](./CHANGELOG.md)
+Pre-release status, many large changes still happening, please keep an eye on the [Changelog](./CHANGELOG.md)
 
 ## Installation ##
 First clone repo:
