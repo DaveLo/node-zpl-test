@@ -1,3 +1,16 @@
+### 1.2.0 (2018-04-19)
+
+##### Chores
+
+* **package:**  add env vars to test server start ([8111638a](https://github.com/DaveLo/node-zpl-test/commit/8111638ac138275b4aefcc2f2a2f58881c678395))
+
+##### New Features
+
+* **app:**
+  *  add skeleton app bootstrap process ([d3decdfc](https://github.com/DaveLo/node-zpl-test/commit/d3decdfc1a8b2ab6299296164b46cb8eaedd1645))
+  *  add static zpl file for testing ([1a6ecfe8](https://github.com/DaveLo/node-zpl-test/commit/1a6ecfe8d764fbd07fe1e8cb022e6c6a7b2aaac3))
+* **server:**  add server start file ([d478fae9](https://github.com/DaveLo/node-zpl-test/commit/d478fae93405fce2e0c0f260d846de7250837242))
+
 ### 1.1.0 (2018-04-19)
 
 ##### Chores
