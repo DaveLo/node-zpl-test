@@ -2,10 +2,11 @@
 "use strict"
 
 // LIBRARIES
-const express = require('express')
-const compression = require('compression')
+const express = require('express');
+const compression = require('compression');
 const bunyan = require('bunyan');
-const bunyanMiddleware = require('bunyan-middleware')
+const bunyanMiddleware = require('bunyan-middleware');
+const path = require('path');
 
 // APP
 const log = bunyan.createLogger({
@@ -31,6 +32,12 @@ app.use(
 app.use(compression());
 
 // ROUTES
+app.use('/js', express.static(path.join(__dirname, 'dist')));
+app.use('/label', express.static(__dirname));
+
+app.use('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist/html/index.html'));
+})
 
 
 // ERROR
