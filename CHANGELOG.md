@@ -1,3 +1,12 @@
+### 1.3.0 (2018-04-20)
+
+##### New Features
+
+* **app:**
+  *  add listeners for printer init and print action ([287c4114](https://github.com/DaveLo/node-zpl-test/commit/287c4114c5b9d33e49bee973cd57c7d54aa349fb))
+  *  add routes ([7a36a9ec](https://github.com/DaveLo/node-zpl-test/commit/7a36a9ec7645bd6a781626d1f02e1c2e4cff4ca1))
+  *  add demo html ([61c620a6](https://github.com/DaveLo/node-zpl-test/commit/61c620a6d5198e7e27ca4d503cc0ed89bf0d031a))
+
 ### 1.2.0 (2018-04-19)
 
 ##### Chores
